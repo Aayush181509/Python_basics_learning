@@ -242,3 +242,72 @@ def my_function(**args):
 
 my_function(name='Aayush',roll=181509,college='NCIT')
 # It is also called as kwags i.e. keyword arguments
+
+# Python lambda
+# lambda is a small anonymous function
+# lambda arguments: expression
+x=lambda a:a+10
+print(x(5))
+# It can take any number of arguments
+x=lambda a,b:a+b
+print(x(5,6))
+
+def my_function(n):
+    return lambda a:a*n
+
+new_func=my_function(2)
+print(new_func(7))
+# Python arrays
+# python does not have a built in arrays but python lists can be used instead
+# However if we wish to use arrays in python we can use numpy arrays instead
+
+# Classes in Python
+# Python is an object oriented language
+# i.e. everything in python is an object
+# Class is like a bluprint for object creation
+class myClass:
+    x=4
+    def newFunction(self):
+        print(self.x)
+
+p1=myClass()
+print(p1.x)
+p1.newFunction()
+
+# python init function is executed whenever the class is being initiated
+class myClass:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def my_function(self):
+        print(f'{self.name}: name age is {self.age}')
+p1=myClass('Aayush',21)
+print(p1.name)
+# __init__ function is called automatically
+p1.my_function()
+# we can also delete object properties
+del p1.name
+print(p1.age)
+del p1
+
+# Python Inheritance
+class Person:
+    def __init__(self,fname,lname):
+        self.firstname=fname
+        self.lastname=lname
+    def print_name(self):
+        print(f'First name: {self.firstname} Last name: {self.lastname}')
+
+x=Person("Aayush","Regmi")
+x.print_name()
+class Student(Person):
+    def __init__(self,fname,lname,age,college):
+        super().__init__(fname,lname)
+        self.age=age
+        self.college=college
+
+    def print_name(self):
+        print(f'Name: {self.firstname} {self.lastname} Age: {self.age} College: {self.college}')
+
+y=Student('Mesut','Ozil','21','Ncit')
+y.print_name()
