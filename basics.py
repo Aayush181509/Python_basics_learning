@@ -311,3 +311,21 @@ class Student(Person):
 
 y=Student('Mesut','Ozil','21','Ncit')
 y.print_name()
+
+# Python dates
+# date in python is not the datatype of it's own we must import datetime module
+import datetime
+x=datetime.datetime.now()
+print(x.strftime("%A"))
+print(datetime.datetime(2020,5,8))
+
+# Python Math
+print(min(2,5,9))
+print(max(2,5,9))
+print(abs(-2.9))
+print(pow(2,3))
+# We can also import a build in math module
+import math
+print(math.sqrt(4))
+
+# Python JSON
